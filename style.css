@@ -19,8 +19,8 @@ td {
   border-width: 3px;
 }
 thead {
-  background: ;
-  color: ;
+  background: lightskyblue;
+  color: black;
 }
 tbody tr:nth-child(odd) {
   background: #fcfcfc;

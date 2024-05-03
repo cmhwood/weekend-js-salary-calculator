@@ -3,6 +3,7 @@ onReady();
 function onReady() {
   console.log('Javascript is working');
 }
+totalMonthly = 0;
 
 function addEmployee(event) {
   event.preventDefault();
