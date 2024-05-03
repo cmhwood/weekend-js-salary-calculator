@@ -3,8 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link defer rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>JS Salary Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>JS Salary Calculator</h1>
+    </header>
+    <main>
+      <section>
+        <h3>Add Employee</h3>
+        <form>
+          <input
+            id="first-name"
+            placeholder="First Name"
+            type="text"
+            required
+            value="first name"
+          />
+          <input
+            id="last-name"
+            placeholder="Last Name"
+            type="text"
+            required
+            value="last name"
+          />
+          <input id="emp-id" placeholder="ID" type="text" required value="id" />
+          <input
+            id="emp-title"
+            placeholder="Job Title"
+            type="text"
+            required
+            value="job title"
+          />
+          <input
+            id="last-name"
+            placeholder="Last Name"
+            type="text"
+            required
+            value="12234"
+          />
+          <input
+            id="annual-salary"
+            placeholder="Annual Salary"
+            type="text"
+            required
+            value="annual salary"
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section>
+        <h3>Employees</h3>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th><!-- This column is for the delete button --></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- comment out the tr below when done-->
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><!-- this will be the delete button --></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><!-- this will be the delete button --></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <h5>Collecting paychecks</h5>
+    </footer>
+  </body>
 </html>
