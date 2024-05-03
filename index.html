@@ -14,7 +14,7 @@
     <main>
       <section>
         <h3>Add Employee</h3>
-        <form>
+        <form onsubmit="addEmployee(event)">
           <input
             id="first-name"
             placeholder="First Name"
@@ -31,25 +31,25 @@
           />
           <input id="emp-id" placeholder="ID" type="text" required value="id" />
           <input
-            id="emp-title"
-            placeholder="Job Title"
-            type="text"
+            id="emp-id"
+            placeholder="ID"
+            type="number"
             required
-            value="job title"
+            value="432"
           />
           <input
-            id="last-name"
-            placeholder="Last Name"
+            id="emp-title"
+            placeholder="Title"
             type="text"
             required
-            value="12234"
+            value="title"
           />
           <input
             id="annual-salary"
             placeholder="Annual Salary"
             type="text"
             required
-            value="annual salary"
+            value="2222"
           />
           <button type="submit">Submit</button>
         </form>
@@ -60,30 +60,30 @@
         <table>
           <thead>
             <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Annual Salary</th>
               <th><!-- This column is for the delete button --></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="table-body">
             <!-- comment out the tr below when done-->
-            <tr>
+            <!-- <tr>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-              <td><!-- this will be the delete button --></td>
+              <td> this will be the delete button</td>
             </tr>
             <tr>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-              <td><!-- this will be the delete button --></td>
-            </tr>
+              <td> this will be the delete button</td>
+            </tr> -->
           </tbody>
         </table>
       </section>

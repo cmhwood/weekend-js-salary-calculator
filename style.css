@@ -1,1 +1,30 @@
-@import 'meyer-reset.css'; /* Add another css file with this https://meyerweb.com/eric/tools/css/reset/ */
+/* @import 'meyer-reset.css'; /* Add another css file with this https://meyerweb.com/eric/tools/css/reset/
+/* TABLE */
+table {
+  width: 100%;
+  text-align: left;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 2.15em;
+}
+th,
+td {
+  padding: 0.5em;
+  min-width: 3.5em;
+  border-color: navy;
+  border-width: 3px;
+}
+thead {
+  background: ;
+  color: ;
+}
+tbody tr:nth-child(odd) {
+  background: #fcfcfc;
+}
+tbody tr:nth-child(even) {
+  background: lightskyblue;
+}
