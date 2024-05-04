@@ -14,7 +14,7 @@
     <main>
       <section>
         <h3>Add Employee</h3>
-        <form onsubmit="addEmployee(event)">
+        <form id="empInput" onsubmit="addEmployee(event)">
           <input
             id="first-name"
             placeholder="First Name"
@@ -86,6 +86,7 @@
             </tr> -->
           </tbody>
         </table>
+        <h3>Total Monthly: $<span id="monthly-salaries"></span></h3>
       </section>
     </main>
     <footer>
