@@ -20,7 +20,6 @@ function addEmployee(event) {
   // console.log(
   //   `${firstName.value}, ${lastName.value}, ${empId.value}, ${empTitle.value}, ${annualSalary.value}`
   // );
-
   const newEmployee = {
     first: firstName.value,
     last: lastName.value,
@@ -29,20 +28,8 @@ function addEmployee(event) {
     salary: Number(annualSalary.value),
   };
 
-  document.getElementById('table-body').innerHTML += `
-  <tr>
-  <td>${firstName.value}</td>
-  <td>${lastName.value}</td>
-  <td>${empId.value}</td>
-  <td>${empTitle.value}</td>
-  <td>$${annualSalary.value}</td>
-  <td><button onclick='deleteEmployee(event)'>Delete</button></td>
-  </tr>
-  `;
-  console.log('salary: ', annualSalary.value);
-
   employees.push(newEmployee);
-  console.log('employees:', employees);
+  console.log('All employees: ', employees);
 
   // document.getElementById('empInput').reset(); // reset the entire form using the form id (html)
   // firstName.value = '';
@@ -50,9 +37,28 @@ function addEmployee(event) {
   // empId.value = '';
   // empTitle = '';
   // annualSalary = '';
-  // console.log(calculateMonthlyTotal);
 
+  renderEmployees();
   calculateMonthly();
+}
+
+function renderEmployees() {
+  const tbodyElement = document.getElementById('table-body');
+  tbodyElement.innerHTML += '';
+
+  for (let i = 0; i < employees.length; i++) {
+    document.getElementById('table-body').innerHTML += `
+  <tr>
+  <td>${employees[i].first}</td>
+  <td>${employees[i].last}</td>
+  <td>${employees[i].id}</td>
+  <td>${employees[i].title}</td>
+  <td>$${employees[i].salary}</td>
+  <td><button onclick='deleteEmployee(event)'>Delete</button></td>
+  </tr>
+  `;
+    console.log('this is the salary: ', employees[i].salary);
+  }
 }
 
 function deleteEmployee(event) {
@@ -69,6 +75,5 @@ function calculateMonthly() {
   let dividedMonthly = totalMonthly / 12;
   console.log('total monthly:', dividedMonthly);
 
-  // const totalDivideMonthly = document.getElementById('monthly-salaries');
-  // totalDivideMonthly.innerText = `${dividedMonthly}`;
+  
 }
