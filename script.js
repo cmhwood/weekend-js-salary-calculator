@@ -7,6 +7,10 @@ function onReady() {
 }
 let employees = [];
 let totalMonthly = 0;
+let USDollar = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
 
 function addEmployee(event) {
   event.preventDefault();
@@ -44,7 +48,7 @@ function addEmployee(event) {
 
 function renderEmployees() {
   const tbodyElement = document.getElementById('table-body');
-  tbodyElement.innerHTML += '';
+  tbodyElement.innerHTML = '';
 
   for (let i = 0; i < employees.length; i++) {
     document.getElementById('table-body').innerHTML += `
@@ -62,9 +66,12 @@ function renderEmployees() {
 }
 
 function deleteEmployee(event) {
-  event.target.closest('tr').remove();
-  // const removeEmp = event.target;
-  // const subtractSalary = removeEmp.closest('tr').remove();
+  const removeEmp = event.target.id;
+  employees.splice(Number(removeEmp), 1);
+  // event.target.closest('tr').remove(); -- this will not reduce the monthly-salaries total
+
+  renderEmployees();
+  calculateMonthly();
 }
 
 function calculateMonthly() {
@@ -73,7 +80,19 @@ function calculateMonthly() {
     totalMonthly = totalMonthly + employees[i].salary; // .salary comes from newEmployee
   }
   let dividedMonthly = totalMonthly / 12;
-  console.log('total monthly:', dividedMonthly);
+  console.log('total monthly:', USDollar.format(dividedMonthly));
 
-  
+  const monthlyElement = document.getElementById('monthly-salaries');
+  if (totalMonthly > 20000) {
+    (monthlyElement.innerText = `Total Monthly Salaries: ${USDollar.format(
+      totalMonthly
+    )}`),
+      monthlyElement;
+    document.getElementById('monthly-salaries').style.color = 'red';
+  } else {
+    (monthlyElement.innerText = `Total Monthly Salaries: ${USDollar.format(
+      totalMonthly
+    )}`),
+      monthlyElement;
+  }
 }
