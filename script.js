@@ -91,7 +91,7 @@ function calculateMonthly() {
     document.getElementById('monthly-salaries').style.color = 'red';
   } else {
     (monthlyElement.innerText = `Total Monthly Salaries: ${USDollar.format(
-      dividedMonthly
+      dividedMonthly // don't forget to use the dividedMonthly
     )}`),
       monthlyElement;
     document.getElementById('monthly-salaries').style.color = 'gold';
