@@ -35,7 +35,7 @@ function addEmployee(event) {
   employees.push(newEmployee);
   console.log('All employees: ', employees);
 
-  // document.getElementById('empInput').reset(); // reset the entire form using the form id (html)
+  document.getElementById('empInput').reset(); // reset the entire form using the form id (html)
   // firstName.value = '';
   // lastName.value = '';
   // empId.value = '';
@@ -58,7 +58,7 @@ function renderEmployees() {
   <td>${employees[i].id}</td>
   <td>${employees[i].title}</td>
   <td>$${employees[i].salary}</td>
-  <td><button onclick='deleteEmployee(event)'>Delete</button></td>
+  <td><button class='delete-button' onclick='deleteEmployee(event)'>Delete</button></td>
   </tr>
   `;
     console.log('this is the salary: ', employees[i].salary);

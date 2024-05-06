@@ -1,3 +1,79 @@
+body {
+  /* background-color: #dcdcdc;
+  font-family: 'Roboto', sans-serif;
+  color: #313131;
+  font-size: 1.25em; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./images/mo-money-mo-problems.jpg);
+  background-repeat: repeat;
+  background-size: 50%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25em;
+  padding: 20px;
+}
+
+img {
+  opacity: 0.5;
+}
+
+/* HEADER/FOOTER */
+header,
+footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer {
+  color: #fff;
+  /* padding: 20px; */
+  /* margin: 0;
+  vertical-align: middle; */
+  margin-top: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: gold;
+}
+
+h3 {
+  color: gold;
+}
+
+/* FORM ELEMENTS */
+input {
+  padding: 0.5em;
+  width: 100px;
+  background: #fcfcfc;
+  border: 1px solid;
+}
+#button {
+  padding: 0px 10px 0px 10px;
+  width: auto;
+  height: 27px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: black;
+  vertical-align: middle;
+  align-items: center;
+  transition-duration: 0.4s;
+  /* background-color: #04aa6d; */
+  /* font-family: cursive; */
+}
+
+#button:hover {
+  background-color: green;
+  transition-duration: 0.4s;
+}
+
+input {
+  width: 9%;
+}
 table {
   width: 100%;
   text-align: left;
@@ -11,18 +87,22 @@ td {
 }
 th,
 td {
-  padding: 0.5em;
+  padding: 5px;
   min-width: 3.5em;
-  border-color: navy;
-  border-width: 3px;
+  border-color: black;
+  border-width: 2px;
 }
 thead {
-  background: lightskyblue;
-  color: black;
+  background: gold;
+  color: #fcfcfc;
 }
 tbody tr:nth-child(odd) {
   background: #fcfcfc;
 }
 tbody tr:nth-child(even) {
-  background: lightskyblue;
+  background: chocolate;
+}
+
+#monthly-salaries {
+  text-align: right;
 }
