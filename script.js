@@ -85,14 +85,15 @@ function calculateMonthly() {
   const monthlyElement = document.getElementById('monthly-salaries');
   if (totalMonthly > 20000) {
     (monthlyElement.innerText = `Total Monthly Salaries: ${USDollar.format(
-      totalMonthly
+      dividedMonthly
     )}`),
       monthlyElement;
     document.getElementById('monthly-salaries').style.color = 'red';
   } else {
     (monthlyElement.innerText = `Total Monthly Salaries: ${USDollar.format(
-      totalMonthly
+      dividedMonthly
     )}`),
       monthlyElement;
+    document.getElementById('monthly-salaries').style.color = 'gold';
   }
 }
