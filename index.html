@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Salary Calculator</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>JS Salary Calculator</title>
   </head>
   <body>
     <header>
@@ -14,7 +14,8 @@
     <main>
       <section>
         <h3>Add Employee</h3>
-        <form id="empInput" onsubmit="addEmployee(event)">
+        <form id="empInput" onSubmit="addEmployee(event)">
+          <!-- onSubmit has extra functionality for forms (validation)-->
           <input
             id="first-name"
             placeholder="First Name"
